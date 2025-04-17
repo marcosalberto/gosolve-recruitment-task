@@ -47,6 +47,5 @@ make up
 ```
 
 4. Access UI on browser
-```
-[http://localhost:3000](http://localhost:3000)
-```
+
+    [http://localhost:3000](http://localhost:3000)
