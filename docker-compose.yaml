@@ -1,0 +1,21 @@
+services:
+    backend:
+        restart: always 
+        build:
+            context: ./backend
+        ports:
+            - ${BACKEND_PORT:-5005}:5000
+        environment: 
+            - FLASK_DEBUG=${BACKEND_DEBUG:-False}
+            - PORT=${BACKEND_PORT:-5005}
+            - LOGGING_LEVEL=${BACKEND_LOG_LEVEL:-INFO}
+        volumes:
+            - "./backend:/app"
+    frontend:
+        build:
+            context: ./frontend
+            args:
+                VITE_API_ADDRESS: ${FRONTEND_API_URL:-http://localhost:5005}
+        ports:
+            - ${FRONTEND_PORT:-3000}:3000
+            

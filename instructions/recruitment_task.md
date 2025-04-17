@@ -26,7 +26,7 @@ So all search operations should be optimized for that particular slice.
 
 `To summarize`:
 - Design API for http `GET` method
-- Implement functionality for searching `index` for `given` value (it should be the most efficient algorithm) 
+- Implement functionality for searching `index` for `given` value (it should be the most efficient algorithm)
 - Add logging
 - Add possibility to use configuration file where you can specify service port and log level (you should be able to choose between Info, Debug, Error)
 - Add `unit tests` for created components
